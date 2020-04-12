@@ -161,9 +161,56 @@ button {
 }
 
 footer {
+  display: grid;
+  grid-template-areas: "huddle menu media" "foot foot foot";
+  grid-template-columns: 1fr 1fr 1fr;
   position: absolute;
   background-color: $darkCyan;
   width: 100vw;
+  font-family: $body;
+  padding-top: 10em;
+  color: $paleCyan;
+  p {
+    color: $paleCyan;
+  }
+  #huddle {
+    grid-area: huddle;
+    padding: 4em;
+    span {
+      display: block;
+      padding: 1em 0;
+    }
+  }
+  #menu {
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .menu {
+      width: fit-content;
+
+      a {
+        display: block;
+        margin: 1em;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $paleCyan;
+  }
+  #media {
+    grid-area: media;
+    svg {
+      border: 1px solid white;
+      border-radius: 50%;
+      padding: 5px;
+      width: 1em;
+    }
+  }
+  .attribution {
+    grid-area: foot;
+    text-align: center;
+  }
 }
 // @media (max-width: 375px) {
 //   #topSection {

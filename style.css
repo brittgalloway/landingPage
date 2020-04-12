@@ -247,8 +247,84 @@ button {
 }
 
 footer {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "huddle menu media" "foot foot foot";
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   position: absolute;
   background-color: #00252e;
   width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 10em;
+  color: #ebfbff;
+}
+
+footer p {
+  color: #ebfbff;
+}
+
+footer #huddle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: huddle;
+  padding: 4em;
+}
+
+footer #huddle span {
+  display: block;
+  padding: 1em 0;
+}
+
+footer #huddle address {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+footer #menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: menu;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+footer #menu .menu {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+footer #menu .menu a {
+  display: block;
+  margin: 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ebfbff;
+}
+
+footer #media {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: media;
+}
+
+footer #media svg {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  width: 1em;
+}
+
+footer .attribution {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: foot;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
