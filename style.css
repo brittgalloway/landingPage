@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: "Poppins", sans-serif;
   color: #00252e;
@@ -223,6 +228,8 @@ button {
   position: relative;
   text-align: center;
   top: 6em;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(133, 133, 133, 0.2), 0 6px 20px 0 rgba(133, 133, 133, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(133, 133, 133, 0.2), 0 6px 20px 0 rgba(133, 133, 133, 0.19);
 }
 
 #card h1 {
@@ -250,8 +257,8 @@ footer {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "huddle menu media" "foot foot foot";
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 3fr 2fr 2fr;
+      grid-template-columns: 3fr 2fr 2fr;
   position: absolute;
   background-color: #00252e;
   width: 100vw;
@@ -269,16 +276,36 @@ footer #huddle {
   -ms-grid-column: 1;
   grid-area: huddle;
   padding: 4em;
+  margin-left: 3em;
 }
 
-footer #huddle span {
-  display: block;
+footer #huddle .logoLight {
+  padding-bottom: 1em;
+}
+
+footer #huddle .textImg {
+  display: inline;
   padding: 1em 0;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "iconLocation location" "iconPhone phone" "iconMail mail";
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+  row-gap: 2em;
 }
 
-footer #huddle address {
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+footer #huddle .textImg #iconLocation {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: iconLocation;
+  padding: 0.5em;
+}
+
+footer #huddle .textImg #location {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: location;
+  padding: 0.2em;
 }
 
 footer #menu {
@@ -289,6 +316,9 @@ footer #menu {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 2em;
 }
 
 footer #menu .menu {
@@ -307,16 +337,32 @@ footer a {
   color: #ebfbff;
 }
 
+footer a:hover {
+  color: #ff52bf;
+}
+
 footer #media {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: media;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  grid-row: row auto;
+  row-gap: 10em;
 }
 
-footer #media svg {
+footer #media span {
+  margin-top: 8em;
+}
+
+footer #media span svg {
   border: 1px solid white;
   border-radius: 50%;
-  padding: 5px;
+  margin: 0.6em;
+  padding: 10px;
   width: 1em;
 }
 

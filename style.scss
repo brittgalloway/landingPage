@@ -7,6 +7,10 @@ $shadow: 4px 4px 15px 4px #eee;
 $headings: "Poppins", sans-serif;
 $body: "Open Sans", sans-serif;
 
+body {
+  margin: 0;
+  padding: 0;
+}
 @mixin buttonStyle {
   border-radius: 3em;
   font-family: $body;
@@ -147,6 +151,8 @@ button {
   position: relative;
   text-align: center;
   top: 6em;
+  box-shadow: 0 4px 8px 0 rgba(133, 133, 133, 0.2),
+    0 6px 20px 0 rgba(133, 133, 133, 0.19);
   h1 {
     font-size: 2em;
   }
@@ -163,7 +169,7 @@ button {
 footer {
   display: grid;
   grid-template-areas: "huddle menu media" "foot foot foot";
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 3fr 2fr 2fr;
   position: absolute;
   background-color: $darkCyan;
   width: 100vw;
@@ -176,15 +182,33 @@ footer {
   #huddle {
     grid-area: huddle;
     padding: 4em;
-    span {
-      display: block;
+    margin-left: 3em;
+    .logoLight {
+      padding-bottom: 1em;
+    }
+    .textImg {
+      display: inline;
       padding: 1em 0;
+      display: grid;
+      grid-template-areas: "iconLocation location" "iconPhone phone" "iconMail mail";
+      column-gap: 1em;
+      row-gap: 2em;
+      #iconLocation {
+        grid-area: iconLocation;
+        padding: 0.5em;
+      }
+      #location {
+        grid-area: location;
+        padding: 0.2em;
+      }
     }
   }
   #menu {
     grid-area: menu;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-content: center;
+    margin-bottom: 2em;
     .menu {
       width: fit-content;
 
@@ -197,14 +221,26 @@ footer {
   a {
     text-decoration: none;
     color: $paleCyan;
+    &:hover {
+      color: $primary;
+    }
   }
   #media {
     grid-area: media;
-    svg {
-      border: 1px solid white;
-      border-radius: 50%;
-      padding: 5px;
-      width: 1em;
+    justify-content: center;
+    display: grid;
+    grid-row: row auto;
+    row-gap: 10em;
+
+    span {
+      margin-top: 8em;
+      svg {
+        border: 1px solid white;
+        border-radius: 50%;
+        margin: 0.6em;
+        padding: 10px;
+        width: 1em;
+      }
     }
   }
   .attribution {
