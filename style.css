@@ -17,8 +17,8 @@ button {
   border-radius: 3em;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
-          box-shadow: 2px 4px 10px 2px #ddd;
+  -webkit-box-shadow: 4px 4px 15px 4px #eee;
+          box-shadow: 4px 4px 15px 4px #eee;
   border: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -88,8 +88,8 @@ button {
   border-radius: 3em;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
-          box-shadow: 2px 4px 10px 2px #ddd;
+  -webkit-box-shadow: 4px 4px 15px 4px #eee;
+          box-shadow: 4px 4px 15px 4px #eee;
   border: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -102,8 +102,8 @@ button {
   gap: 2em;
   width: 80vw;
   border-radius: 1em;
-  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
-          box-shadow: 2px 4px 10px 2px #ddd;
+  -webkit-box-shadow: 4px 4px 15px 4px #eee;
+          box-shadow: 4px 4px 15px 4px #eee;
   margin: 3em auto;
   padding: 2em;
   -ms-grid-columns: 3fr 2fr;
@@ -116,7 +116,6 @@ button {
   -ms-grid-column: 1;
   grid-area: left;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   padding: 6em;
 }
@@ -139,10 +138,34 @@ button {
   gap: 2em;
   width: 80vw;
   border-radius: 1em;
-  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
-          box-shadow: 2px 4px 10px 2px #ddd;
+  -webkit-box-shadow: 4px 4px 15px 4px #eee;
+          box-shadow: 4px 4px 15px 4px #eee;
   margin: 3em auto;
   padding: 2em;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+      grid-template-areas: "left right";
+}
+
+#thirdSection #flow {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: right;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 6em;
+}
+
+#thirdSection #flow h1 {
+  font-size: 1.5em;
+}
+
+#thirdSection #visual3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left;
+  width: 100%;
+  height: auto;
 }
 
 #fourthSection {
@@ -151,10 +174,35 @@ button {
   gap: 2em;
   width: 80vw;
   border-radius: 1em;
-  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
-          box-shadow: 2px 4px 10px 2px #ddd;
+  -webkit-box-shadow: 4px 4px 15px 4px #eee;
+          box-shadow: 4px 4px 15px 4px #eee;
   margin: 3em auto;
   padding: 2em;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+      grid-template-areas: "left right";
+}
+
+#fourthSection #users {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 6em;
+}
+
+#fourthSection #users h1 {
+  font-size: 1.5em;
+}
+
+#fourthSection #visuals4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: right;
+  width: 100%;
+  height: auto;
 }
 
 #card {
@@ -163,29 +211,43 @@ button {
   gap: 2em;
   width: 80vw;
   border-radius: 1em;
-  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
-          box-shadow: 2px 4px 10px 2px #ddd;
+  -webkit-box-shadow: 4px 4px 15px 4px #eee;
+          box-shadow: 4px 4px 15px 4px #eee;
   margin: 3em auto;
   padding: 2em;
   width: 50vw;
+  margin-top: 5em;
+  margin-bottom: 0;
+  background-color: white;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  top: 6em;
+}
+
+#card h1 {
+  font-size: 2em;
 }
 
 #card button {
   color: white;
+  margin: 2em auto;
   background-color: #ff52bf;
   padding: 2em 8em;
   border-radius: 3em;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
-          box-shadow: 2px 4px 10px 2px #ddd;
+  -webkit-box-shadow: 4px 4px 15px 4px #eee;
+          box-shadow: 4px 4px 15px 4px #eee;
   border: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  box-shadow: 4px 4px 15px 4px #eee;
 }
 
 footer {
+  position: absolute;
   background-color: #00252e;
   width: 100vw;
 }

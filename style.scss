@@ -3,7 +3,7 @@ $primary: hsl(322, 100%, 66%);
 $paleCyan: hsl(193, 100%, 96%);
 $darkCyan: hsl(192, 100%, 9%);
 $grayishBlue: hsl(208, 11%, 55%);
-$shadow: 2px 4px 10px 2px #ddd;
+$shadow: 4px 4px 15px 4px #eee;
 $headings: "Poppins", sans-serif;
 $body: "Open Sans", sans-serif;
 
@@ -103,22 +103,65 @@ button {
 }
 #thirdSection {
   @include sections();
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: "left right";
+  #flow {
+    grid-area: right;
+    align-self: center;
+    padding: 6em;
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+  #visual3 {
+    grid-area: left;
+    width: 100%;
+    height: auto;
+  }
 }
 #fourthSection {
   @include sections();
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas: "left right";
+  #users {
+    grid-area: left;
+    align-self: center;
+    padding: 6em;
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+  #visuals4 {
+    grid-area: right;
+    width: 100%;
+    height: auto;
+  }
 }
 #card {
   @include sections();
   width: 50vw;
+  margin-top: 5em;
+  margin-bottom: 0;
+  background-color: white;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  top: 6em;
+  h1 {
+    font-size: 2em;
+  }
   button {
     color: white;
+    margin: 2em auto;
     background-color: $primary;
     padding: 2em 8em;
     @include buttonStyle();
+    box-shadow: $shadow;
   }
 }
 
 footer {
+  position: absolute;
   background-color: $darkCyan;
   width: 100vw;
 }
