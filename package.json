@@ -1,0 +1,29 @@
+{
+  "name": "landingpage",
+  "version": "1.0.0",
+  "description": "coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brittgalloway/landingPage.git"
+  },
+  "keywords": [
+    "challenge",
+    "landing",
+    "page",
+    "frontend",
+    "mentor"
+  ],
+  "author": "Brittney Galloway",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brittgalloway/landingPage/issues"
+  },
+  "homepage": "https://github.com/brittgalloway/landingPage#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
