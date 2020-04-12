@@ -3,33 +3,35 @@ $primary: hsl(322, 100%, 66%);
 $paleCyan: hsl(193, 100%, 96%);
 $darkCyan: hsl(192, 100%, 9%);
 $grayishBlue: hsl(208, 11%, 55%);
-$shadow: 2px 4px 4px 2px #ddd;
-
+$shadow: 2px 4px 10px 2px #ddd;
 $headings: "Poppins", sans-serif;
 $body: "Open Sans", sans-serif;
+
 @mixin buttonStyle {
   border-radius: 3em;
   font-family: $body;
   font-weight: 700;
   box-shadow: $shadow;
   border: none;
+  width: fit-content;
+}
+@mixin sections {
+  width: 80vw;
+  border-radius: 1em;
+  box-shadow: $shadow;
+  margin: 3em auto;
+  padding: 2em;
 }
 h1 {
   font-family: $headings;
+  color: $darkCyan;
 }
 p {
   font-family: $body;
   font-size: 18px;
   color: $grayishBlue;
 }
-header {
-  button {
-    color: $darkCyan;
-    background-color: white;
-    padding: 0.75em 3.25em;
-    @include buttonStyle();
-  }
-}
+
 button {
   color: white;
   background-color: $primary;
@@ -38,8 +40,65 @@ button {
 }
 
 #topSection {
-  width: 100vw;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: "top topButton" "text img";
   background-image: url("./images/bg-hero-desktop.svg");
+  background-color: $paleCyan;
+  article {
+    grid-area: text;
+    align-self: center;
+    width: 90%;
+    padding-left: 7em;
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      color: $darkCyan;
+      margin-bottom: 2em;
+    }
+  }
+  #visual {
+    grid-area: img;
+    width: 80%;
+    height: auto;
+    padding: 5em;
+  }
+}
+#logo {
+  grid-area: top;
+
+  margin: 5em 0 0em 7em;
+}
+#topBtn {
+  grid-area: topButton;
+  justify-self: end;
+  align-self: end;
+  color: $darkCyan;
+  background-color: white;
+  margin-right: 7em;
+  padding: 0.82em 6.5em;
+  @include buttonStyle();
+}
+#secondSection {
+  @include sections();
+}
+#thirdSection {
+  @include sections();
+}
+#fourthSection {
+  @include sections();
+}
+#card {
+  @include sections();
+  width: 50vw;
+  button {
+    color: white;
+    background-color: $primary;
+    padding: 2em 8em;
+    @include buttonStyle();
+  }
 }
 
 footer {

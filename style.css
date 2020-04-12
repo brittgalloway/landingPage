@@ -1,24 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
 h1 {
   font-family: "Poppins", sans-serif;
+  color: #00252e;
 }
 
 p {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: #808d99;
-}
-
-header button {
-  color: #00252e;
-  background-color: white;
-  padding: 0.75em 3.25em;
-  border-radius: 3em;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  -webkit-box-shadow: 2px 4px 4px 2px #ddd;
-          box-shadow: 2px 4px 4px 2px #ddd;
-  border: none;
 }
 
 button {
@@ -28,14 +17,135 @@ button {
   border-radius: 3em;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  -webkit-box-shadow: 2px 4px 4px 2px #ddd;
-          box-shadow: 2px 4px 4px 2px #ddd;
+  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
+          box-shadow: 2px 4px 10px 2px #ddd;
   border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #topSection {
-  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  gap: 2em;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+      grid-template-areas: "top topButton" "text img";
   background-image: url("./images/bg-hero-desktop.svg");
+  background-color: #ebfbff;
+}
+
+#topSection article {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: text;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 90%;
+  padding-left: 7em;
+}
+
+#topSection article h1 {
+  font-size: 2em;
+}
+
+#topSection article p {
+  color: #00252e;
+  margin-bottom: 2em;
+}
+
+#topSection #visual {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: img;
+  width: 80%;
+  height: auto;
+  padding: 5em;
+}
+
+#logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: top;
+  margin: 5em 0 0em 7em;
+}
+
+#topBtn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: topButton;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  color: #00252e;
+  background-color: white;
+  margin-right: 7em;
+  padding: 0.82em 6.5em;
+  border-radius: 3em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
+          box-shadow: 2px 4px 10px 2px #ddd;
+  border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#secondSection {
+  width: 80vw;
+  border-radius: 1em;
+  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
+          box-shadow: 2px 4px 10px 2px #ddd;
+  margin: 3em auto;
+  padding: 2em;
+}
+
+#thirdSection {
+  width: 80vw;
+  border-radius: 1em;
+  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
+          box-shadow: 2px 4px 10px 2px #ddd;
+  margin: 3em auto;
+  padding: 2em;
+}
+
+#fourthSection {
+  width: 80vw;
+  border-radius: 1em;
+  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
+          box-shadow: 2px 4px 10px 2px #ddd;
+  margin: 3em auto;
+  padding: 2em;
+}
+
+#card {
+  width: 80vw;
+  border-radius: 1em;
+  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
+          box-shadow: 2px 4px 10px 2px #ddd;
+  margin: 3em auto;
+  padding: 2em;
+  width: 50vw;
+}
+
+#card button {
+  color: white;
+  background-color: #ff52bf;
+  padding: 2em 8em;
+  border-radius: 3em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  -webkit-box-shadow: 2px 4px 10px 2px #ddd;
+          box-shadow: 2px 4px 10px 2px #ddd;
+  border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 footer {
