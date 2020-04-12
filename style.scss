@@ -16,6 +16,8 @@ $body: "Open Sans", sans-serif;
   width: fit-content;
 }
 @mixin sections {
+  display: grid;
+  gap: 2em;
   width: 80vw;
   border-radius: 1em;
   box-shadow: $shadow;
@@ -46,7 +48,7 @@ button {
   grid-template-areas: "top topButton" "text img";
   background-image: url("./images/bg-hero-desktop.svg");
   background-color: $paleCyan;
-  article {
+  #build {
     grid-area: text;
     align-self: center;
     width: 90%;
@@ -83,6 +85,21 @@ button {
 }
 #secondSection {
   @include sections();
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas: "left right";
+  #grow {
+    grid-area: left;
+    align-self: center;
+    padding: 6em;
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+  #visual2 {
+    grid-area: right;
+    width: 100%;
+    height: auto;
+  }
 }
 #thirdSection {
   @include sections();
@@ -105,5 +122,13 @@ footer {
   background-color: $darkCyan;
   width: 100vw;
 }
-@media (min-width: 375px) {
-}
+// @media (max-width: 375px) {
+//   #topSection {
+//     display: grid;
+//     gap: 2em;
+//     grid-template-columns: 2fr 2fr;
+//     grid-template-areas: "top topButton" "text text" "img img";
+//     background-image: url("./images/bg-hero-mobile.svg");
+//     background-color: $paleCyan;
+//   }
+// }

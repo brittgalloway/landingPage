@@ -36,7 +36,7 @@ button {
   background-color: #ebfbff;
 }
 
-#topSection article {
+#topSection #build {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: text;
@@ -47,11 +47,11 @@ button {
   padding-left: 7em;
 }
 
-#topSection article h1 {
+#topSection #build h1 {
   font-size: 2em;
 }
 
-#topSection article p {
+#topSection #build p {
   color: #00252e;
   margin-bottom: 2em;
 }
@@ -97,15 +97,46 @@ button {
 }
 
 #secondSection {
+  display: -ms-grid;
+  display: grid;
+  gap: 2em;
   width: 80vw;
   border-radius: 1em;
   -webkit-box-shadow: 2px 4px 10px 2px #ddd;
           box-shadow: 2px 4px 10px 2px #ddd;
   margin: 3em auto;
   padding: 2em;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+      grid-template-areas: "left right";
+}
+
+#secondSection #grow {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 6em;
+}
+
+#secondSection #grow h1 {
+  font-size: 1.5em;
+}
+
+#secondSection #visual2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: right;
+  width: 100%;
+  height: auto;
 }
 
 #thirdSection {
+  display: -ms-grid;
+  display: grid;
+  gap: 2em;
   width: 80vw;
   border-radius: 1em;
   -webkit-box-shadow: 2px 4px 10px 2px #ddd;
@@ -115,6 +146,9 @@ button {
 }
 
 #fourthSection {
+  display: -ms-grid;
+  display: grid;
+  gap: 2em;
   width: 80vw;
   border-radius: 1em;
   -webkit-box-shadow: 2px 4px 10px 2px #ddd;
@@ -124,6 +158,9 @@ button {
 }
 
 #card {
+  display: -ms-grid;
+  display: grid;
+  gap: 2em;
   width: 80vw;
   border-radius: 1em;
   -webkit-box-shadow: 2px 4px 10px 2px #ddd;
