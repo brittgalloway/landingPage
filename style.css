@@ -358,11 +358,11 @@ footer #media {
   row-gap: 10em;
 }
 
-footer #media span {
+footer #media div {
   margin-top: 8em;
 }
 
-footer #media span svg {
+footer #media div svg {
   border: 1px solid white;
   border-radius: 50%;
   margin: 0.6em;
