@@ -248,13 +248,176 @@ footer {
     text-align: center;
   }
 }
-// @media (max-width: 375px) {
-//   #topSection {
-//     display: grid;
-//     gap: 2em;
-//     grid-template-columns: 2fr 2fr;
-//     grid-template-areas: "top topButton" "text text" "img img";
-//     background-image: url("./images/bg-hero-mobile.svg");
-//     background-color: $paleCyan;
-//   }
-// }
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.25em;
+  }
+  p {
+    font-size: 14px;
+  }
+  button {
+    padding: 0.75em 3em;
+  }
+  @mixin sections {
+    display: grid;
+    width: 80vw;
+    border-radius: 1em;
+    box-shadow: $shadow;
+    margin: 2em auto;
+    padding: 1em;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #topSection {
+    width: 100vw;
+    background-image: url("./images/bg-hero-mobile.svg");
+    background-color: $paleCyan;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "top topButton" "text text" "img img";
+    gap: 0.5em;
+    h1 {
+      font-size: 1.25em;
+    }
+    #logo {
+      margin: 2em 0 0 2em;
+      width: 45%;
+      justify-self: start;
+    }
+    #topBtn {
+      padding: 0.2em 1.5em;
+      margin-right: 0;
+    }
+    #build {
+      text-align: center;
+      padding-left: 0;
+      h1 {
+        font-size: 1.25em;
+        text-align: center;
+      }
+      justify-self: center;
+    }
+    #visual {
+      justify-self: center;
+      padding: 2em;
+    }
+  }
+  #secondSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "right right" "left left";
+    text-align: center;
+    #grow {
+      align-self: center;
+      padding: 1em;
+      h1 {
+        font-size: 1em;
+      }
+    }
+    #visual2 {
+      width: 100%;
+      height: auto;
+    }
+  }
+  #thirdSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left left" "right right";
+    text-align: center;
+    #flow {
+      align-self: center;
+      padding: 1em;
+      h1 {
+        font-size: 1em;
+      }
+    }
+    #visual3 {
+      width: 100%;
+      height: auto;
+    }
+  }
+  #fourthSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "right right" "left left";
+    text-align: center;
+    #users {
+      align-self: center;
+      padding: 1em;
+      h1 {
+        font-size: 1em;
+      }
+    }
+    #visuals4 {
+      width: 100%;
+      height: auto;
+    }
+  }
+  #card {
+    width: 70vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    top: 6em;
+    padding: 1em;
+    row-gap: 0;
+    h1 {
+      font-size: 0.9em;
+    }
+    button {
+      margin: 1.5em auto;
+
+      padding: 1em 4em;
+    }
+  }
+  footer {
+    display: grid;
+    grid-template-areas: "huddle" "menu" "media" "foot";
+    grid-template-columns: 1fr;
+    padding-top: 8em;
+    #huddle {
+      grid-area: huddle;
+      padding: 1em;
+      margin-left: 0em;
+      .logoLight {
+        padding-bottom: 0.5em;
+        width: 50%;
+      }
+      .textImg {
+        row-gap: 1.5em;
+      }
+    }
+    #menu {
+      grid-area: menu;
+      grid-template-columns: 1fr;
+      margin-bottom: 2em;
+      .menu {
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        a {
+          margin: 1em;
+        }
+      }
+    }
+
+    #media {
+      grid-area: media;
+      justify-content: center;
+      display: grid;
+      grid-row: row auto;
+      row-gap: 2em;
+
+      span {
+        margin-top: 1em;
+        justify-self: center;
+      }
+    }
+    .attribution {
+      grid-area: foot;
+      text-align: center;
+    }
+  }
+}

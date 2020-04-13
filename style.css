@@ -373,4 +373,193 @@ footer .attribution {
   grid-area: foot;
   text-align: center;
 }
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.25em;
+  }
+  p {
+    font-size: 14px;
+  }
+  button {
+    padding: 0.75em 3em;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #topSection {
+    width: 100vw;
+    background-image: url("./images/bg-hero-mobile.svg");
+    background-color: #ebfbff;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "top topButton" "text text" "img img";
+    gap: 0.5em;
+  }
+  #topSection h1 {
+    font-size: 1.25em;
+  }
+  #topSection #logo {
+    margin: 2em 0 0 2em;
+    width: 45%;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  #topSection #topBtn {
+    padding: 0.2em 1.5em;
+    margin-right: 0;
+  }
+  #topSection #build {
+    text-align: center;
+    padding-left: 0;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  #topSection #build h1 {
+    font-size: 1.25em;
+    text-align: center;
+  }
+  #topSection #visual {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    padding: 2em;
+  }
+  #secondSection {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "right right" "left left";
+    text-align: center;
+  }
+  #secondSection #grow {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 1em;
+  }
+  #secondSection #grow h1 {
+    font-size: 1em;
+  }
+  #secondSection #visual2 {
+    width: 100%;
+    height: auto;
+  }
+  #thirdSection {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left left" "right right";
+    text-align: center;
+  }
+  #thirdSection #flow {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 1em;
+  }
+  #thirdSection #flow h1 {
+    font-size: 1em;
+  }
+  #thirdSection #visual3 {
+    width: 100%;
+    height: auto;
+  }
+  #fourthSection {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "right right" "left left";
+    text-align: center;
+  }
+  #fourthSection #users {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 1em;
+  }
+  #fourthSection #users h1 {
+    font-size: 1em;
+  }
+  #fourthSection #visuals4 {
+    width: 100%;
+    height: auto;
+  }
+  #card {
+    width: 70vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    top: 6em;
+    padding: 1em;
+    row-gap: 0;
+  }
+  #card h1 {
+    font-size: 0.9em;
+  }
+  #card button {
+    margin: 1.5em auto;
+    padding: 1em 4em;
+  }
+  footer {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "huddle" "menu" "media" "foot";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-top: 8em;
+  }
+  footer #huddle {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: huddle;
+    padding: 1em;
+    margin-left: 0em;
+  }
+  footer #huddle .logoLight {
+    padding-bottom: 0.5em;
+    width: 50%;
+  }
+  footer #huddle .textImg {
+    row-gap: 1.5em;
+  }
+  footer #menu {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: menu;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-bottom: 2em;
+  }
+  footer #menu .menu {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  footer #menu .menu a {
+    margin: 1em;
+  }
+  footer #media {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: media;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -ms-grid;
+    display: grid;
+    grid-row: row auto;
+    row-gap: 2em;
+  }
+  footer #media span {
+    margin-top: 1em;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  footer .attribution {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: foot;
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=style.css.map */
