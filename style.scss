@@ -18,6 +18,7 @@ body {
   box-shadow: $shadow;
   border: none;
   width: fit-content;
+  cursor: pointer;
 }
 @mixin sections {
   display: grid;
